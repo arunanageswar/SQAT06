@@ -30,3 +30,32 @@ Then('I should see the search results', function(callback) {
     callback(error);
   })
 })
+
+Given('I go to google', function(callback) {
+  this.browser
+  .init()
+  .url('https://www.google.com/').then(function() {
+    callback();
+  })
+})
+
+When('I search for googlemaps', function(callback){
+  this.browser
+  .setValue('#lst-ib','googlemaps')
+  .keys('Enter').then(function(){
+    callback();
+  })
+})
+
+Then('I should see the search results on google', function(callback) {
+  this.browser
+  .getTitle().then(function(result){
+    result.should.equal("googlemaps - Google Search");
+    callback();
+  }).catch(function(error){
+    callback(error);
+  })
+})
+
+
+
