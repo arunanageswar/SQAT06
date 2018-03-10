@@ -1,15 +1,18 @@
 {
-    "name": "SQA06",
-    "version": "1.0.0",
-    "description": "SQA06 web automation framework",
-    "dependencies": {
-        "webdriverio": "4.7.1",
-        "selenium-standalone": "5.9.0",
-        "chai": "4.1.2",
-        "mocha": "5.0.0",
-        "cucumber": "4.0.0"
-    },
-    "scripts": {
-        "test": "mocha"
-     }
+  "name": "SQA06",
+  "version": "1.0.0",
+  "description": "SQA06 web automation framework",
+  "dependencies": {
+    "webdriverio": "4.7.1",
+    "selenium-standalone": "5.9.0",
+    "chai": "4.1.2",
+    "mocha": "5.0.0",
+    "cucumber": "4.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "selenium-standalone": "^5.9.0"
+  }
 }

@@ -1,14 +1,14 @@
-Feature: Simple maths
-  In order to do maths
-  As a developer
-  I want to increment variables
+Feature: Sign-up feature
+  As An anonymous user
+  I want to be member of the application
+  So That I can register with sign-up form
 
-  Scenario: easy maths
-    Given I go to duck duck go
-    When  I search for WebdriverIO
-    Then  I should see the search results
+  Scenario: Unsuccessful sign up on figure1
+    Given I go to figure1 register page
+    When I Enter Invalid Username
+    Then I should see result username invalid  
 
-Scenario: Search for Google
-    Given I go to google
-    When  I search for googlemaps
-    Then  I should see the search results on google
+ Scenario: Successful sign up on figure1
+    Given I am at figure1 register page
+    When I Enter Username, emailid, password, repeat password, select other fields
+    

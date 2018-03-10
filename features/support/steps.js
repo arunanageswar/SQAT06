@@ -5,57 +5,76 @@ const should = chai.should()
 "use strict";
 
 
-Given('I go to duck duck go', function(callback) {
+Given('I go to figure1 register page', function(callback) {
   this.browser
     .init()
-    .url('https://duckduckgo.com/').then(function() {
+    .url('https://app.figure1.com/account/register').then(function() {
       callback();
     })
 })
-
-When('I search for WebdriverIO', function(callback) {
+When('I Enter Invalid Username', function(callback) {
   this.browser
-    .setValue('#search_form_input_homepage', 'WebdriverIO')
-    .click('#search_button_homepage').then(function(){
+  .waitForVisible('.register-page__username-input', 2000)
+  .setValue('.register-page__username-input', 'aru')
+  .setValue('.register-page__email-input', 'aru@abc.com')
+  .setValue('.register-page__password-input', 'sqat06')
+  .setValue('.register-page__confirm-password-input', 'sqat06')
+  .selectByIndex('.register-page__specialties-list,index', 1)
+  .selectByIndex('.register-page__specialties-other-list', 8 )
+  .scroll('.box')
+  .click('.box')
+  .click('.register-page__submit-button')
+  .then(function() {
+    callback();
+  }).catch(function(error){
+  callback(error);
+})
+})
+Then('I should see result username invalid', function(callback){
+  this.browser
+  .waitForVisible('.invalid-field', 2000)
+  .getText('.invalid-field').then(function(result){
+   result.should.equal("Username must be at least 4 characters long (accepts letters, numbers and dashes)"); 
+   callback();
+  }).catch(function(error){
+    callback(error);
+    browser.end();
+  })
+})
+
+
+Given('I am at figure1 register page', function(callback) {
+  this.browser
+    .init()
+    .url('https://app.figure1.com/account/register').then(function() {
       callback();
     })
 })
-
-Then('I should see the search results', function(callback) {
+When('I Enter Username, emailid, password, repeat password, select other fields', function(callback) {
   this.browser
-    .getTitle().then(function(result){
-        result.should.equal("WebdriverIO at DuckDuckGo");
-        callback();
-  }).catch(function(error){
-    callback(error);
-  })
-})
-
-Given('I go to google', function(callback) {
-  this.browser
-  .init()
-  .url('https://www.google.com/').then(function() {
-    callback();
-  })
-})
-
-When('I search for googlemaps', function(callback){
-  this.browser
-  .setValue('#lst-ib','googlemaps')
-  .keys('Enter').then(function(){
-    callback();
-  })
-})
-
-Then('I should see the search results on google', function(callback) {
-  this.browser
-  .getTitle().then(function(result){
-    result.should.equal("googlemaps - Google Search");
+  .waitForVisible('.register-page__username-input', 2000)
+  .setValue('.register-page__username-input', this.randomUsers())
+  .setValue('.register-page__email-input',this.randomUsers()+ '@gmail.com')
+  .setValue('.register-page__password-input', 'sqat06')
+  .setValue('.register-page__confirm-password-input', 'sqat06')
+  .selectByIndex('.register-page__specialties-list,index', 1)
+  .selectByIndex('.register-page__specialties-other-list', 8 )
+  .scroll('.box')
+  .click('.box')
+ // .click('.register-page__submit-button')
+  .then(function() {
     callback();
   }).catch(function(error){
-    callback(error);
-  })
+  callback(error);
 })
-
-
-
+})
+//Then('I should see Successful result', function(callback){
+  //this.browser
+  //.waitForVisible('#header-home', 2000)
+  //.getText('#header-home').then(function(result){
+   //result.should.equal("); 
+   //callback();
+  //}).catch(function(error){
+    //callback(error);
+  //})
+//})
