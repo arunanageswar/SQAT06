@@ -40,9 +40,12 @@ H5---Execution of the scripts---
 7. When scripts passes then at command prompt displays in a format ---for my test scripts for this assighment have ---2 scenarios (2 passed) 6 Steps(6 passed) and the time took to execute all the test scripts 1m21.624s
 
 
-Creating new branch --command is--git branch
-command --'git remote -v' will display the repositories 
-command --'git push repo name 
----
+Adding files, committing and Pushing to github repository
+Commands are 
+git status
+git add file name
+git commit -m "updated code"
+git push arunanageswar 
+
 
 
