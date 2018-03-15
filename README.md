@@ -1,3 +1,4 @@
+This awesome project is done by Aruna at Centennial College
 H1---Automation of Web Application using the Open source tools as Selenium Standalone, Webdriverio ,Cucumber Framework, Chai framework, Github, NodeJs, Gitbash, Windows OS
 
 H2---Prerequsites steps to be followed before running the automation---
