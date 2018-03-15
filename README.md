@@ -1,7 +1,6 @@
-This awesome project is done by Aruna at Centennial College
-H1---Automation of Web Application using the Open source tools as Selenium Standalone, Webdriverio ,Cucumber Framework, Chai framework, Github, NodeJs, Gitbash, Windows OS
+Automation of Web Application using the Open source tools as Selenium Standalone, Webdriverio,Cucumber Framework, Chai framework, Github, NodeJs, Gitbash, Windows OS
 
-H2---Prerequsites steps to be followed before running the automation---
+Prerequsites steps to be followed before running the automation
 Software's to be installed are listed below
 Download Visual studio code according to the system 32bit / 64 bit
 Install nodejs version 7.8.2 
@@ -11,7 +10,7 @@ Install npm selenium standalone latest (version 5.9.0)globally by the command at
 Install selenum standalone locally by the command --'selenum-standalone install'
 Install CucumberJs, ChaiJs by commands --'npm install cucumber' & 'npm install chai'
 
-H3---Clone the code from professor's Repository
+Clone the code from professor's Repository
 Steps
 1. Signed up on Github and once logged in then searched for Professor's IzzatBamieh/SQAT06 Repository
 2. Click on Clone and copy the URL 
@@ -22,7 +21,7 @@ Steps
 7. Selenium Standalone to install --command is --npm install selenium-standalone@5.9.0 -g
 
 
-H4---Automation Scripts for Invalid signup & Valid Signup steps----
+Automation Scripts for Invalid signup & Valid Signup steps
 1. Features file is created and habe subfolders which are Steps.js, hooks.js , world.js and Scenaro.feature
 2. At Scenario.feature ---Scenario's are written in a simple gherkin language i.e Given, When & Then
 3. At Steps.js ---scripts are written which are based with the scenarios to cover the test scripts for automation testing
@@ -30,7 +29,7 @@ H4---Automation Scripts for Invalid signup & Valid Signup steps----
 5. hooks.js---After, before functions are initialized 
 6. All the work is saved
 
-H5---Execution of the scripts---
+Execution of the scripts
 1. Saved all the work at all the files of the features folder
 2. Open command prompt and be in the directory and start the selenium standalone server and the command is---"selenium-standalone start"
 3. Open another command prompt and be in the directory--run this command to execute the scripts -command is---".\node_modules\.bin\cucumber-js"
