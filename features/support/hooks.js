@@ -1,6 +1,5 @@
-var {After, Before} = require('cucumber');
-
+var { After, Before, Status } = require('cucumber');
 
 After(function () {
- // return this.browser.end();
+
 });
