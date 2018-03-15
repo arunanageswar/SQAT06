@@ -41,11 +41,10 @@ Execution of the scripts
 
 Adding files, committing and Pushing to github repository
 Commands are ----
-
-git status
-git add file name
-git commit -m "updated code"
-git push arunanageswar 
+1. git status
+2. git add file name, 
+3. git commit -m "updated code", 
+4. git push arunanageswar 
 
 
 
