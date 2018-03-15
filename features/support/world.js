@@ -7,6 +7,7 @@ const options = { desiredCapabilities: { browserName: 'chrome' } };
 class CustomWorld {
   constructor() {
     this.browser = webdriverio.remote(options);
+   this.user = this.randomUsers();
   }
 
   goToWebsite() {

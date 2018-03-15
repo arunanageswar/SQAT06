@@ -3,12 +3,13 @@ Feature: Sign-up feature
   I want to be member of the application
   So That I can register with sign-up form
 
-  Scenario: Unsuccessful sign up on figure1
+  Scenario: Invalid sign up on figure1
     Given I go to figure1 register page
-    When I Enter Invalid Username
-    Then I should see result username invalid  
+    When I Enter Invalid credentials on signup page fields
+    Then I should see Unsuccessful result
 
- Scenario: Successful sign up on figure1
+ Scenario: Valid sign up on figure1
     Given I am at figure1 register page
-    When I Enter Username, emailid, password, repeat password, select other fields
+    When I Enter valid credentials at all fields 
+    Then I should see Successful result
     
