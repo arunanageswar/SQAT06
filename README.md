@@ -40,7 +40,8 @@ Execution of the scripts
 
 
 Adding files, committing and Pushing to github repository
-Commands are 
+Commands are ----
+
 git status
 git add file name
 git commit -m "updated code"
